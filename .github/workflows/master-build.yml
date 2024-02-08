@@ -63,7 +63,7 @@ jobs:
 
         run: cd Folia && ./patch.bat && ./jar.bat
 
-      - name: Upload Artifacts
+      - name: Upload Artifacts 
 
         uses: actions/upload-artifact@v2
 
@@ -71,4 +71,14 @@ jobs:
 
           name: Folia Artifact
 
-          path: build/libs/*, Folia/build/libs/*
+          path: build/libs/*
+          
+      - name: Upload dev Folia
+
+        uses: actions/upload-artifact@v2
+
+        with:
+
+          name: Folia dev Artifact
+
+          path: Folia/build/libs/*
