@@ -55,6 +55,14 @@ jobs:
 
         run: ./gradlew createReobfPaperclipJar
 
+      - name: clone dev repo
+
+        run: git clone -b dev/1.20.4 https://github.com/PaperMC/Folia
+
+      - name: cd and build
+
+        run: cd Folia && ./patch.bat && ./jar.bat
+
       - name: Upload Artifacts
 
         uses: actions/upload-artifact@v2
@@ -63,4 +71,4 @@ jobs:
 
           name: Folia Artifact
 
-          path: build/libs/*
+          path: build/libs/*, Folia/build/libs/*
