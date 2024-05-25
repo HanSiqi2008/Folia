@@ -57,11 +57,11 @@ jobs:
 
       - name: clone dev repo
 
-        run: git clone -b dev/1.20.4 https://github.com/PaperMC/Folia
+        run: git clone https://github.com/PaperMC/Paper
 
       - name: cd and build
 
-        run: cd Folia && ./patch.bat && ./jar.bat
+        run: cd Paper && ./gradlew applyPatches && ./gradlew createReobfPaperclipJar
 
       - name: Upload Artifacts 
 
@@ -79,6 +79,6 @@ jobs:
 
         with:
 
-          name: Folia dev Artifact
+          name: Paper 1.20.6 Artifact
 
-          path: Folia/build/libs/*
+          path: Paper/build/libs/*
