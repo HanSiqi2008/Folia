@@ -53,7 +53,7 @@ jobs:
 
       - name: createJar
 
-        run: ./gradlew createReobfPaperclipJar
+        run: ./gradlew createMojmapPaperclipJar
 
       - name: clone dev repo
 
@@ -61,7 +61,7 @@ jobs:
 
       - name: cd and build
 
-        run: cd Folia && ./gradlew applyPatches && ./gradlew createReobfPaperclipJar
+        run: cd Folia && ./gradlew applyPatches && ./gradlew createMojmapPaperclipJar
 
       - name: Upload Artifacts 
 
