@@ -57,7 +57,7 @@ jobs:
 
       - name: clone dev repo
 
-        run: git clone -b dev/* https://github.com/PaperMC/Folia
+        run: git clone -b dev/1.21.1 https://github.com/PaperMC/Folia
 
       - name: cd and build
 
